@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确认</string>
+    <string name="str_to_set">新版本已经下载完成，请设置授权安装新版本</string>
+    <string name="set">设置</string>
+</resources>

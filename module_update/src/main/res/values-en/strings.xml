@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="cancel">cancle</string>
+    <string name="sure">confirm</string>
+    <string name="str_to_set">The new version has been downloaded. Please set the authorization to install the new version</string>
+    <string name="set">set</string>
+</resources>

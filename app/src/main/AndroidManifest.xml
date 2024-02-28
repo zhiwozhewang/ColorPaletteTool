@@ -1,0 +1,121 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.whatscolors.demo.takephoto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!--    8.0手机安装软件 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 允许装载和卸载文件系统权限 -->
+    <!--    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <application
+        android:name="com.whatscolors.demo.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/im_logonew"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/im_logonew"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--        tools:node="replace"-->
+        <!--        tools:replace="android:appComponentFactory"-->
+        <meta-data
+            android:name="com.google.android.play.billingclient.version"
+            android:value="5.0.0" />
+        <!--        dp为标准-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" />
+
+        <!--        px为标准-->
+        <!--        <meta-data-->
+        <!--            android:name="design_width_in_dp"-->
+        <!--            android:value="375" />-->
+        <!--        <meta-data-->
+        <!--            android:name="design_height_in_dp"-->
+        <!--            android:value="667" />-->
+
+        <activity
+            android:name="com.whatscolors.demo.takephoto.SplashActivity"
+            android:icon="@drawable/im_logonew"
+            android:roundIcon="@drawable/im_logonew"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--协议部分-->
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="openapp"
+                    android:scheme="whatscolors" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.whatscolors.demo.ui.FirstActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.whatscolors.demo.takephoto.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.whatscolors.demo.ui.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.whatscolors.demo.ui.RegistActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.whatscolors.demo.ui.WebActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.whatscolors.demo.ui.MyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.whatscolors.demo.ui.PayActivity"
+            android:launchMode="singleTop" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"></activity>
+        <activity
+            android:name="com.whatscolors.demo.ui.PsActivity"
+            android:launchMode="singleTop" />
+        <activity android:name="com.whatscolors.demo.base.BaseActivity" />
+
+        <service
+            android:name="com.whatscolors.demo.service.UpdateGifService"
+            tools:ignore="Instantiatable" />
+    </application>
+
+</manifest>

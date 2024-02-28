@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/ic_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="#ff434040"
+            android:textSize="@dimen/sp_12" />
+
+
+        <EditText
+            android:id="@+id/edit_fn"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_15"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/First_Name"
+            android:maxLength="20"
+            android:paddingLeft="@dimen/dp_7"
+
+            android:textColorHint="#FFC7C7CC" />
+
+
+        <EditText
+            android:id="@+id/edit_ln"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_15"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/Last_Name"
+            android:maxLength="20"
+            android:paddingLeft="@dimen/dp_7"
+            android:textColorHint="#FFC7C7CC" />
+
+        <EditText
+            android:id="@+id/edit_em"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_15"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:paddingLeft="@dimen/dp_7"
+            android:textColorHint="#FFC7C7CC" />
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7">
+
+            <EditText
+                android:id="@+id/edit_ps_rg"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_edit"
+                android:hint="@string/Password"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="@dimen/dp_7"
+
+                android:textColorHint="#ffc7c7cc" />
+
+            <CheckBox
+                android:id="@+id/edit_ps_rg_im"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_6"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@drawable/eye_selecter"
+                android:button="@null" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7">
+
+            <EditText
+                android:id="@+id/edit_cps_rg"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_15"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_edit"
+                android:hint="@string/Confirm_Password"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:paddingLeft="@dimen/dp_7"
+                android:textColorHint="#ffc7c7cc" />
+
+            <CheckBox
+                android:id="@+id/edit_cps_rg_im"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_6"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@drawable/eye_selecter"
+                android:button="@null" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/rg_to"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_16"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@drawable/bg_upgrade"
+            android:gravity="center"
+            android:text="@string/Create_Accoun"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_6" />
+        <!--        android:background="@drawable/bg_login"-->
+
+
+        <TextView
+            android:id="@+id/rg_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_10"
+            android:gravity="center"
+            android:textColor="#ffd1d1d6"
+            android:textSize="@dimen/sp_5" />
+
+        <TextView
+            android:id="@+id/rg_to_login"
+            android:layout_width="@dimen/dp_76"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_7"
+            android:gravity="center"
+            android:text="@string/have_Account"
+            android:textColor="#ffff7b00"
+            android:textSize="@dimen/sp_6" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="@dimen/dp_30"
+            android:id="@+id/gif_im"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center"
+             />
+<!--        android:background="@drawable/loading_logo"-->
+        <!--        <ImageView-->
+        <!--            android:layout_width="@dimen/dp_26"-->
+        <!--            android:layout_height="@dimen/dp_26"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:src="@drawable/im_logonew" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Whatscolors"
+            android:textColor="#ff434040"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Textile LAB Color Generation"
+            android:textColor="#ff434040"
+            android:textSize="@dimen/sp_6" />
+    </LinearLayout>
+</FrameLayout>

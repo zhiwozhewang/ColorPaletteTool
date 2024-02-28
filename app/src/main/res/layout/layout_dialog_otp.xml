@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_dl"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/text_dl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="left"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:padding="@dimen/dp_5"
+            android:text="@string/str_ps_once"
+            android:textColor="#FF000000"
+            android:textSize="@dimen/sp_5" />
+
+        <EditText
+            android:id="@+id/edit_ps"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_15"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/OtpPassword"
+            android:inputType="numberPassword"
+            android:maxLength="8"
+            android:paddingLeft="@dimen/dp_7"
+            android:textColorHint="#FFC7C7CC"
+            android:textSize="@dimen/sp_5" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_dl_no"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="@string/change_pas"
+                android:textColor="#FF000000"
+                android:textSize="@dimen/sp_6"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_dl_yes"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:text="@string/dialog_tip3"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_6" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

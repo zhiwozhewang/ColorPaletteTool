@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/ps_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_4"
+            android:layout_height="@dimen/dp_6"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/im_l_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:text="@string/Back"
+            android:textColor="#ffff7b00"
+            android:textSize="@dimen/sp_6"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/forgot_password"
+            android:textColor="#ff434040"
+            android:textSize="@dimen/sp_6"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:text="@string/ps_tip"
+        android:textColor="#FFC7C7CC"
+        android:textSize="@dimen/sp_5" />
+
+    <EditText
+        android:id="@+id/edit_em"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_15"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_28"
+        android:background="@drawable/bg_edit"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/dp_7"
+        android:textColorHint="#FFC7C7CC" />
+
+
+    <TextView
+        android:id="@+id/ps_to"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_16"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_11"
+        android:background="@drawable/bg_upgrade"
+        android:gravity="center"
+        android:text="@string/send_your_password"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_6" />
+
+
+</LinearLayout>

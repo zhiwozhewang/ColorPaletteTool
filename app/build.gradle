@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 32
+    buildToolsVersion = "28.0.3"
+    defaultConfig {
+        applicationId "com.whatscolors.demo.takephoto"
+        minSdkVersion 17
+        targetSdkVersion 32
+        versionCode 106
+        versionName "1.0.6"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+//            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+            abiFilters 'armeabi-v7a', 'x86'  //配置项。可选取值：armeabi/armeabi-v7a/x86
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file("../whatscolors.jks")
+            storePassword 'android'
+            keyAlias 'key0'
+            keyPassword 'android'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "wc_${variant.productFlavors.name}_${defaultConfig.versionName}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/androidx.vectordrawable_vectordrawable.version'
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    flavorDimensions "default"
+    productFlavors {
+        //标准
+        wechat {
+            resValue "string", "str_about", "file:///android_asset/about_us_zh.html"
+            resValue "string", "str_pay", "wechat"
+            resValue "string", "str_privacy_policy", "file:///android_asset/privacy_policy_zh.html"
+            resValue "string", "Str_Terms_Conditions", "file:///android_asset/terms_and_conditions.html"
+
+            resValue "string", "tip_36", "￥ 63.00"
+            resValue "string", "tip_39", "￥ 176.00"
+            resValue "string", "tip_41", "￥ 500.00"
+            signingConfig signingConfigs.debug
+            dimension "default"
+            versionCode 1150
+            versionName "1.15.0"
+            externalNativeBuild {
+                ndk {
+//                    abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+
+                    abiFilters 'armeabi-v7a', 'x86'  //配置项。可选取值：armeabi/armeabi-v7a/x86
+                }
+            }
+
+        }
+        google {
+            resValue "string", "str_about", "file:///android_asset/about_us_en.html"
+            resValue "string", "str_pay", "google"
+            resValue "string", "str_privacy_policy", "file:///android_asset/privacy_policy.html"
+            resValue "string", "Str_Terms_Conditions", "file:///android_asset/terms_and_conditions.html"
+
+            resValue "string", "tip_36", "HK\$ 80.00"
+            resValue "string", "tip_39", "HK\$ 220.00"
+            resValue "string", "tip_41", "HK\$ 600.00"
+            signingConfig signingConfigs.debug
+            dimension "default"
+            versionCode 1150
+            versionName "1.15.0"
+            externalNativeBuild {
+                ndk {
+                    abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+                }
+            }
+
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation project(path: ':module_update')
+    implementation 'com.google.android.material:material:1.4.0'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.github.yalantis:ucrop:2.2.8-native'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+// Because RxAndroid releases are few and far between, it is recommended you also
+// explicitly depend on RxJava's latest version for bug fixes and new features.
+// (see https://github.com/ReactiveX/RxJava/releases for latest 2.x.x version)
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.13'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.orhanobut:logger:1.13'
+    implementation 'com.android.billingclient:billing:2.0.3'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.4.0'
+    implementation project(path: ':open')
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'me.jessyan:autosize:1.2.1'
+//    implementation('com.aliyun.ams:alicloud-android-ha-adapter:1.1.3.4-open@aar') {
+//        transitive = true
+//    }
+//    implementation('com.aliyun.ams:alicloud-android-tlog:1.1.2.3-open@aar') {
+//        transitive = true
+//    }
+//    implementation('com.aliyun.ams:alicloud-android-ha-crashreporter:1.2.1-open@aar') {
+//        transitive = true
+//    }
+    //glide图片加载
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    def billingVersion = "5.0.0"
+
+    implementation "com.android.billingclient:billing:$billingVersion"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TakePicAndGallery_opencv.iml" filepath="$PROJECT_DIR$/TakePicAndGallery_opencv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TakePicAndGallery_opencv.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TakePicAndGallery_opencv.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/module_update/TakePicAndGallery_opencv.module_update.iml" filepath="$PROJECT_DIR$/.idea/modules/module_update/TakePicAndGallery_opencv.module_update.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/open/TakePicAndGallery_opencv.open.iml" filepath="$PROJECT_DIR$/.idea/modules/open/TakePicAndGallery_opencv.open.iml" />
+    </modules>
+  </component>
+</project>
